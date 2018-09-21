@@ -23,12 +23,12 @@ def show_results():
     mood = request.args.get("name")
 
     if mood == "cheery":
-        pass
+        message = "It's a wonderful day!"
     elif mood == "honest":
-        pass
+        message = "I hope you get more sleep tonight"
     elif mood == "dreary":
-        pass
-    return render_template('results.html')
+        message = "I'll put the coffee pot on"
+    return render_template('results.html', message=message)
 
 @app.route('/save-name')
 def savename():
